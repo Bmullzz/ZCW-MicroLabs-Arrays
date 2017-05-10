@@ -3,7 +3,7 @@ package io.zipcoder.microlabs.arrays;
 
 public class ArrayParty {
 
-    public String printArray(String[] inputArray){
+    public String printArray(String[] inputArray) {
 
         String output = "printArray(breakfast)\n*** Output ***";
         String arrayList = "";
@@ -17,7 +17,7 @@ public class ArrayParty {
         return output + arrayList;
     }
 
-    public String lastElement(String[] inputArray){
+    public String lastElement(String[] inputArray) {
 
         String output = "lastElement(breakfast)\n*** Output ***\n";
 
@@ -25,11 +25,30 @@ public class ArrayParty {
 
     }
 
-    //TODO Define the method lastButOne
+    public String lastButOne(String[] inputArray) {
 
-    //TODO Define the method reverse
+        String output = "lastButOne(breakfast)\n*** Output ***\n";
+
+        return output + inputArray[inputArray.length - 2];
+
+
+    }
+    
+    public String reverse(String[] inputArray) {
+
+        String output = "reverse(breakfast)\n*** Output ***";
+        String reversed = "";
+
+        for (int i = inputArray.length - 1; i >= 0; i--){
+
+            reversed += "\n" + inputArray[i];
+
+        }
+        return output + reversed;
+    }
 
     //TODO Define the method isPalindrome
+
 
     //TODO Define the method compress
 
