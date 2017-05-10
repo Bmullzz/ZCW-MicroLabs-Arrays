@@ -10,7 +10,7 @@ public class ArrayPartyTest {
         //: Given
         String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         ArrayParty arrayParty = new ArrayParty();
-        String expected = "*** Output ***\n" +
+        String expected = "printArray(breakfast)\n*** Output ***\n" +
                 "Sausage\n" +
                 "Eggs\n" +
                 "Beans\n" +
