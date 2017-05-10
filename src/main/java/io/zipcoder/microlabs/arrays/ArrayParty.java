@@ -19,10 +19,10 @@ public class ArrayParty {
 
     public String lastElement(String[] inputArray){
 
-        String output = "lastElement(breakfast)\n*** Output ***";
-        String arrayList = "";
+        String output = "lastElement(breakfast)\n*** Output ***\n";
 
-        return "";
+        return output + inputArray[inputArray.length - 1];
+
     }
 
     //TODO Define the method lastButOne
