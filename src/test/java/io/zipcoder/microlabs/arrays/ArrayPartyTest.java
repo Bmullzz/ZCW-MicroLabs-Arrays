@@ -76,7 +76,7 @@ public class ArrayPartyTest {
 
     //TODO Define the method isPalindromeTest
     @Test
-    public void isPalindromeTest(){
+    public void isPalindromeTestTrue(){
         //: Given
         String[] palindromic = {"Sausage", "Eggs", "Beans", "Beans", "Eggs", "Sausage"};
         ArrayParty arrayParty = new ArrayParty();
@@ -92,7 +92,7 @@ public class ArrayPartyTest {
     }
 
     @Test
-    public void isPalindromeTestTwo(){
+    public void isPalindromeTestFalse(){
         //: Given
         String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         ArrayParty arrayParty = new ArrayParty();
@@ -106,7 +106,7 @@ public class ArrayPartyTest {
         //: Then
         Assert.assertEquals("The two string outputs are equal", expected, actual);
     }
-    //TODO Define the method compressTest
+
     @Test
     public void compressTest(){
         //: Given
@@ -114,10 +114,10 @@ public class ArrayPartyTest {
         ArrayParty arrayParty = new ArrayParty();
         String expected = "compress(nums)\n" +
                 "*** Output ***\n" +
-                "1" +
-                "2" +
-                "2" +
-                "1" +
+                "1\n" +
+                "3\n" +
+                "2\n" +
+                "1\n" +
                 "4";
 
         //: When

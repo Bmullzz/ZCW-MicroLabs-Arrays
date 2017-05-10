@@ -51,16 +51,16 @@ public class ArrayParty {
 
         String output = "isPalindrome(breakfast)\n*** Output ***";
         String reversed = "";
-        String forward = Arrays.toString(inputArray);
-        forward = forward.replaceAll("[^A-Za-z]", "");
+        String forward = Arrays.toString(inputArray); //converts array to string
+        forward = forward.replaceAll("[^A-Za-z]", ""); //removes punctuation and spaces from string
         String palindrome = "";
 
-        for (int i = inputArray.length - 1; i >= 0; i--){
+        for (int i = inputArray.length - 1; i >= 0; i--){ //creates reverse string
 
             reversed += inputArray[i];
         }
 
-        if (reversed.equals(forward)) {
+        if (reversed.equals(forward)) { //checks if two strings are equal
 
             palindrome += "\n" + "True";
         }
@@ -69,28 +69,36 @@ public class ArrayParty {
             palindrome += "\n" + "False";
         }
 
-        System.out.println(reversed);
-        System.out.println(forward);
-
         return output + palindrome;
     }
 
-
     //TODO Define the method compress
     public String compress(int[] nums){
+        String output = "compress(nums)\n*** Output ***\n";
+        String compArray = Integer.toString(nums[0]);
+
+        for (int i = 0; i < nums.length-1; i++){
+
+            if (nums[i] != nums[i+1]){
+
+                compArray += "\n" + nums[i+1];
+            }
 
 
+        }
+
+        return output + compArray;
     }
 
 
     //TODO Define the method pack
 
     public static void main(String[] args) {
-
+        int[] nums = {1, 1, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 4, 4, 4, 4};
         String[] palindromic = {"Sausage", "Eggs", "Beans", "Beans", "Eggs", "Sausage"};
         String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         ArrayParty party = new ArrayParty();
-        System.out.print(party.isPalindrome(breakfast));
+        System.out.print(party.compress(nums));
     }
 
 
