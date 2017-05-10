@@ -75,7 +75,37 @@ public class ArrayPartyTest {
     }
 
     //TODO Define the method isPalindromeTest
+    @Test
+    public void isPalindromeTest(){
+        //: Given
+        String[] palindromic = {"Sausage", "Eggs", "Beans", "Beans", "Eggs", "Sausage"};
+        ArrayParty arrayParty = new ArrayParty();
+        String expected = "isPalindrome(breakfast)\n" +
+                "*** Output ***\n" +
+                "True";
 
+        //: When
+        String actual = arrayParty.isPalindrome(palindromic);
+
+        //: Then
+        Assert.assertEquals("The two string outputs are equal", expected, actual);
+    }
+
+    @Test
+    public void isPalindromeTestTwo(){
+        //: Given
+        String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
+        ArrayParty arrayParty = new ArrayParty();
+        String expected = "isPalindrome(breakfast)\n" +
+                "*** Output ***\n" +
+                "False";
+
+        //: When
+        String actual = arrayParty.isPalindrome(breakfast);
+
+        //: Then
+        Assert.assertEquals("The two string outputs are equal", expected, actual);
+    }
     //TODO Define the method compressTest
 
     //TODO Define the method packTest

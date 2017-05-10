@@ -1,5 +1,5 @@
 package io.zipcoder.microlabs.arrays;
-
+import java.util.Arrays;
 
 public class ArrayParty {
 
@@ -33,7 +33,7 @@ public class ArrayParty {
 
 
     }
-    
+
     public String reverse(String[] inputArray) {
 
         String output = "reverse(breakfast)\n*** Output ***";
@@ -47,12 +47,47 @@ public class ArrayParty {
         return output + reversed;
     }
 
-    //TODO Define the method isPalindrome
+    public String isPalindrome(String[] inputArray) {
+
+        String output = "isPalindrome(breakfast)\n*** Output ***";
+        String reversed = "";
+        String forward = Arrays.toString(inputArray);
+        forward = forward.replaceAll("[^A-Za-z]", "");
+        String palindrome = "";
+
+        for (int i = inputArray.length - 1; i >= 0; i--){
+
+            reversed += inputArray[i];
+        }
+
+        if (reversed.equals(forward)) {
+
+            palindrome += "\n" + "True";
+        }
+        else{
+
+            palindrome += "\n" + "False";
+        }
+
+        System.out.println(reversed);
+        System.out.println(forward);
+
+        return output + palindrome;
+    }
 
 
     //TODO Define the method compress
 
+
     //TODO Define the method pack
+
+    public static void main(String[] args) {
+
+        String[] palindromic = {"Sausage", "Eggs", "Beans", "Beans", "Eggs", "Sausage"};
+        String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
+        ArrayParty party = new ArrayParty();
+        System.out.print(party.isPalindrome(breakfast));
+    }
 
 
 
