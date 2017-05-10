@@ -77,6 +77,10 @@ public class ArrayParty {
 
 
     //TODO Define the method compress
+    public String compress(int[] nums){
+
+
+    }
 
 
     //TODO Define the method pack

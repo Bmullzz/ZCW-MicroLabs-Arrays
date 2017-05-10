@@ -40,7 +40,7 @@ public class ArrayPartyTest {
     }
 
     @Test
-    public void lastButOne(){
+    public void lastButOneTest(){
         //: Given
         String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         ArrayParty arrayParty = new ArrayParty();
@@ -107,6 +107,25 @@ public class ArrayPartyTest {
         Assert.assertEquals("The two string outputs are equal", expected, actual);
     }
     //TODO Define the method compressTest
+    @Test
+    public void compressTest(){
+        //: Given
+        int[] nums = {1, 1, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 4, 4, 4, 4};
+        ArrayParty arrayParty = new ArrayParty();
+        String expected = "compress(nums)\n" +
+                "*** Output ***\n" +
+                "1" +
+                "2" +
+                "2" +
+                "1" +
+                "4";
+
+        //: When
+        String actual = arrayParty.compress(nums);
+
+        //: Then
+        Assert.assertEquals("The two string outputs are equal", expected, actual);
+    }
 
     //TODO Define the method packTest
 
