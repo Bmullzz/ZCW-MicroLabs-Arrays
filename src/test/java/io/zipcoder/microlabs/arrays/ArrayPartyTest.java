@@ -127,7 +127,21 @@ public class ArrayPartyTest {
         Assert.assertEquals("The two string outputs are equal", expected, actual);
     }
 
-    //TODO Define the method packTest
+    @Test
+    public void packTest(){
+        //: Given
+        char[] letters = {'a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e'};
+        ArrayParty arrayParty = new ArrayParty();
+        String expected = "pack(letters)\n" +
+                "*** Output ***\n" +
+                ": aaaa, b, cc, aa, d, eeee";
 
+
+        //: When
+        String actual = arrayParty.pack(letters);
+
+        //: Then
+        Assert.assertEquals("The two string outputs are equal", expected, actual);
+    }
 
 }

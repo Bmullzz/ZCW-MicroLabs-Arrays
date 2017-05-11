@@ -72,7 +72,6 @@ public class ArrayParty {
         return output + palindrome;
     }
 
-    //TODO Define the method compress
     public String compress(int[] nums){
         String output = "compress(nums)\n*** Output ***\n";
         String compArray = Integer.toString(nums[0]);
@@ -90,15 +89,32 @@ public class ArrayParty {
         return output + compArray;
     }
 
+    public String pack(char[] letters){
+        String output = "pack(letters)\n*** Output ***\n";
+        String packed = ": " + Character.toString(letters[0]);
 
-    //TODO Define the method pack
+        for (int i = 0; i < letters.length-1; i++){
+
+            if (letters[i] == letters[i+1]) {
+
+                packed += Character.toString(letters[i+1]);
+
+            }else{
+
+                packed += ", " + Character.toString(letters[i+1]);
+            }
+        }
+
+        return output + packed;
+    }
 
     public static void main(String[] args) {
+        char[] letters = {'a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e'};
         int[] nums = {1, 1, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 4, 4, 4, 4};
         String[] palindromic = {"Sausage", "Eggs", "Beans", "Beans", "Eggs", "Sausage"};
         String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         ArrayParty party = new ArrayParty();
-        System.out.print(party.compress(nums));
+        System.out.print(party.pack(letters));
     }
 
 
