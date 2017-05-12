@@ -1,4 +1,5 @@
 package io.zipcoder.microlabs.arrays;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ArrayParty {
@@ -92,19 +93,20 @@ public class ArrayParty {
     public String pack(char[] letters){
         String output = "pack(letters)\n*** Output ***\n";
         String packed = ": " + Character.toString(letters[0]);
-
+        ArrayList<String> packedList = new ArrayList<String>();
         for (int i = 0; i < letters.length-1; i++){
 
             if (letters[i] == letters[i+1]) {
 
-                packed += Character.toString(letters[i+1]);
+                packed += Character.toString(letters[i]);
 
             }else{
-
+               // packedList.add(packed);
+                //packed = Character.toString(letters[i+1]);
                 packed += ", " + Character.toString(letters[i+1]);
             }
         }
-
+        packedList.add(packed);
         return output + packed;
     }
 
